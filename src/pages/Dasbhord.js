@@ -1,4 +1,4 @@
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { Link, useNavigate, Outlet } from "react-router-dom";
 
 export default function Dasbhord() {
   const navigate = useNavigate();
@@ -9,9 +9,16 @@ export default function Dasbhord() {
 
   return (
     <div>
-      <h1>Dasbhord</h1>
+      <Outlet />
       <button onClick={handleClick}>Logout</button>
-      <Route path='welcome' element={<p>Welcome!</p>} />
+
+      <br/>
+
+      <Link to="welcome">say welcome</Link>
+
+      <br/>
+
+      <Link to="goodbye">say goodbye</Link>
     </div>
   );
 }

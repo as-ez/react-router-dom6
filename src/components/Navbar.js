@@ -30,6 +30,14 @@ export default function NavBar() {
             Users
           </NavLink>
         </li>
+        <li>
+          <NavLink
+            className={({ isActive }) => (isActive ? "active" : "")}
+            to="/dasbhord"
+          >
+            dasbhord
+          </NavLink>
+        </li>
       </ul>
     </div>
   );
